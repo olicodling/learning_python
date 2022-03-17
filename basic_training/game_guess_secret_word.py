@@ -1,15 +1,19 @@
-secret_word = "Spoons"
+secret_word = ""
 guess = ""
 guess_count = 0
 guess_limit = 3
 out_of_guesses = False
 
-while guess != secret_word and not (out_of_guesses):
-    if guess_count < guess_limit:
-        guess = input("Guess my secret word: ")
-        guess_count += 1
-    else: 
-        out_of_guesses = True
+if secret_word == "":
+    print("What the devil, there's no secret word specified! Bailing.")
+    quit()
+else:
+    while guess != secret_word and not (out_of_guesses):
+        if guess_count < guess_limit:
+            guess = input("Guess my secret word: ")
+            guess_count += 1
+        else: 
+            out_of_guesses = True
         
 if out_of_guesses:
     print("Out of guesses, you lose sucka!")

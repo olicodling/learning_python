@@ -1,4 +1,4 @@
-secret_word = ""
+secret_word = "Spoons"
 guess = ""
 guess_count = 0
 guess_limit = 3
